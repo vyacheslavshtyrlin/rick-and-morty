@@ -1,0 +1,18 @@
+<div class="pagination-container">
+  <button
+    (click)="onPrev()"
+    [disabled]="(isLoading$ | async)!"
+    class="pagination-icon"
+  >
+    <img src="../../../assets/iconPrev.svg" />
+  </button>
+  <span class="page">{{ currentPage }}</span>
+  <button
+    [disabled]="(isLoading$ | async)!"
+    (click)="onNext()"
+    class="pagination-icon"
+    disabled="isLoading$"
+  >
+    <img src="../../../assets/iconNext.svg" />
+  </button>
+</div>

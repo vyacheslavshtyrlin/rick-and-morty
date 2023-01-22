@@ -1,0 +1,88 @@
+.page-container {
+  padding: 51px 64px;
+}
+
+.row-container {
+  display: flex;
+  gap: 279px;
+  margin-bottom: 40px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.row {
+  display: flex;
+  gap: 104px;
+}
+
+.row-property {
+  width: 50px;
+}
+
+.episode {
+  line-height: 32px;
+}
+
+.name-caption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 0;
+  margin-bottom: 53px;
+}
+
+.caption {
+  margin-bottom: 22px;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #2962ff;
+  text-decoration: none;
+}
+
+.link-container {
+  margin-bottom: 22px;
+}
+
+.item-caption-details {
+  width: fit-content;
+}
+
+
+
+@media screen and (max-width: 850px) {
+  .row-container {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .row-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .item-info {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+}

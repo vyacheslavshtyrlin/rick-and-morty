@@ -1,0 +1,36 @@
+<div class="message" *ngIf="isLoading$ | async">Loading..</div>
+<div class="message" *ngIf="error$ | async">Ошибка:(</div>
+<div *ngIf="character" class="page-container">
+  <div class="link-container"><a class="link" [routerLink]="['/']">&#8592; Вернуться</a></div>
+  <p class="name-caption">{{ character.name }}</p>
+  <div class="row-container">
+    <div class="col">
+      <div class="item-info">
+        <span class="row-property">Пол</span>
+        <span class="item-caption item-caption-details">{{ character.gender }}</span>
+      </div>
+      <div class="item-info">
+        <span class="row-property">Статус</span>
+        <span class="item-caption item-caption-details">{{ character.status }}</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="item-info">
+        <span class="row-property">Вид</span>
+        <span class="item-caption item-caption-details">{{ character.species }}</span>
+      </div>
+      <div class="item-info">
+        <span class="row-property">Локация</span>
+        <span class="item-caption item-caption-details">{{ character.location.name }}</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="caption">Эпизоды</p>
+    <div class="episode-container">
+      <span class="item-caption episode" *ngFor="let item of character.episode"
+        >{{ item.name }},
+      </span>
+    </div>
+  </div>
+</div>

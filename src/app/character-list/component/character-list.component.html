@@ -1,0 +1,45 @@
+<div class="container-body">
+  <div class="container-filter">
+    <app-filter-list></app-filter-list>
+  </div>
+  <div class="container">
+    <header class="header">Rick And Morty App</header>
+    <div *ngIf="isLoading$ | async">Loading..</div>
+    <div *ngIf="error$ | async">Ошибка:(</div>
+
+    <div *ngIf="data$ | async" class="list-container">
+      <div
+        class="notfound message"
+        *ngIf="(data$ | async).characters.results.length === 0"
+      >
+        Ничего не найдено
+      </div>
+      <ul class="list">
+        <li
+          *ngFor="let item of (data$ | async).characters.results"
+          class="list-item"
+        >
+          <div class="item-name-container">
+            <p class="item-name">{{ item.name }}</p>
+            <a [routerLink]="['/characters', item.id]" class="item-link">
+              <img src="../../../assets/iconLink.svg" class="link-icon" />
+            </a>
+          </div>
+          <div class="item-details">
+            <div class="item-info">
+              <span>Пол</span>
+              <span class="item-caption">{{ item.gender }}</span>
+            </div>
+            <div class="item-info">
+              <span>Статус</span>
+              <span class="item-caption">{{ item.status }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div *ngIf="(data$ | async).characters.results.length > 19">
+        <app-pagination></app-pagination>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.pagination-container {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+}
+
+.pagination-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.page {
+  width: 18px;
+  text-align: center;
+  height: 28px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  /* or 200% */
+
+  color: #000000;
+}

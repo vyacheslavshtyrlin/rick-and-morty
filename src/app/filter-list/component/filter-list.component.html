@@ -1,0 +1,45 @@
+<div class="filter-container">
+  <h2 class="filter-title">Фильтры</h2>
+  <form [formGroup]="form" (change)="onChange()">
+    <input
+      formControlName="name"
+      type="text"
+      class="filter-input"
+      placeholder="Имя"
+    />
+    <div class="filter-radio-container">
+      <div class="input-radio-container">
+        <span class="filter-name">Dead</span>
+        <input
+          name="status"
+          formControlName="status"
+          value="dead"
+          type="radio"
+          class="filter-radio"
+        />
+      </div>
+
+      <div class="input-radio-container">
+        <span class="filter-name">Alive</span>
+        <input
+          name="status"
+          formControlName="status"
+          value="alive"
+          type="radio"
+          class="filter-radio"
+        />
+      </div>
+      <div class="input-radio-container">
+        <span class="filter-name">Unknown</span>
+        <input
+          name="status"
+          formControlName="status"
+          value="unknown"
+          type="radio"
+          class="filter-radio"
+        />
+      </div>
+      <p class="filter-name">К сожалению, не получилось реализовать еще 1 селектор, т.к выбранный бэк не поддерживает фильтр по нескольким значениям.</p>
+    </div>
+  </form>
+</div>

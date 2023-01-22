@@ -1,0 +1,84 @@
+.filter-container {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-left: 1px solid #a5a5a5;
+  padding: 55px 33px;
+  height: 100%;
+}
+
+.filter-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.filter-title {
+  margin: 0 0 48px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.filter-input {
+  font-family: "Roboto";
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 29px;
+  padding: 0 0 7px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.filter-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.filter-input:focus {
+  border-bottom: 1px solid #347cff;
+}
+
+.filter-radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.filter-radio {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.input-radio-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 28px;
+  align-items: center;
+}
